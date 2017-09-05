@@ -1,8 +1,5 @@
 FROM ubuntu:17.04
 
-# set new password
-RUN echo "root:Docker" | chpasswd
-
 # install required tools
 RUN apt-get update \
     && apt-get install --yes --force-yes --no-install-recommends \
