@@ -23,7 +23,9 @@ RUN apt-get update \
 # install theme
 RUN echo deb http://ppa.launchpad.net/numix/ppa/ubuntu zesty main > /etc/apt/sources.list.d/numix.list \
     && apt-get update \
-    && apt-get install --yes --force-yes --no-install-recommends numix-icon-theme numix-icon-theme-circle
+    && apt-get install --yes --force-yes --no-install-recommends numix-icon-theme numix-icon-theme-circle \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # add the customised files
 ADD ubuntu-files/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
