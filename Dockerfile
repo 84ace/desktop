@@ -1,14 +1,14 @@
 FROM ubuntu:17.04
 
-# install required tools
+# install packages
 RUN apt-get update \
     && apt-get install --yes --force-yes --no-install-recommends \
-	xrdp \
-	software-properties-common \
+        xrdp \
+        xorgxrdp \
+        software-properties-common \
         xorg \
         xserver-xorg \
-        lightdm \
-        lightdm-gtk-greeter \
+        xfce4 \
         gnome-themes-standard \
         gtk2-engines-pixbuf \
         file-roller \
@@ -17,12 +17,13 @@ RUN apt-get update \
         leafpad \
         xfce4-whiskermenu-plugin \
         ttf-ubuntu-font-family \
-        xfce4-goodies \
-    && add-apt-repository -y ppa:numix/ppa \
-    && apt-get update \
-    && apt-get install --yes --force-yes --no-install-recommends numix-icon-theme numix-icon-theme-circle \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+# install theme
+RUN echo deb http://ppa.launchpad.net/numix/ppa/ubuntu zesty main > /etc/apt/sources.list.d/numix.list \
+    && apt-get update \
+    && apt-get install --yes --force-yes --no-install-recommends numix-icon-theme numix-icon-theme-circle
 
 # add the customised files
 ADD ubuntu-files/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
