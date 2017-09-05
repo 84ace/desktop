@@ -1,4 +1,4 @@
-FROM kxes/ubuntu-xrdp-base
+FROM ubuntu:17.04
 
 # set new password
 RUN echo "root:Docker" | chpasswd
