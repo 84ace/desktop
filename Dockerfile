@@ -5,7 +5,9 @@ RUN echo "root:Docker" | chpasswd
 
 # install required tools
 RUN apt-get update \
-    && apt-get install --yes --force-yes --no-install-recommends software-properties-common \
+    && apt-get install --yes --force-yes --no-install-recommends \
+	xrdp \
+	software-properties-common \
         xorg \
         xserver-xorg \
         lightdm \
