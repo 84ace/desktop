@@ -17,6 +17,7 @@ RUN apt-get update \
         leafpad \
         xfce4-whiskermenu-plugin \
         ttf-ubuntu-font-family \
+        dbus-x11 \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 

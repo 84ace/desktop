@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# create a dbus system daemon
+dbus-daemon --system
+
 # create the sock dir properly
 /bin/sh /usr/share/xrdp/socksetup
 
