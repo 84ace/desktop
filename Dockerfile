@@ -34,3 +34,6 @@ ADD ubuntu-files/xfce-perchannel-xml /etc/xdg/xfce4/xfconf/xfce-perchannel-xml
 RUN mkdir -p /usr/share/backgrounds
 ADD ubuntu-files/background-default.png /usr/share/backgrounds/background-default.png
 RUN ln -s /usr/share/icons/Numix-Circle /usr/share/icons/KXicons
+
+ADD entrypoint.sh /entrypoint.sh
+ENTRYPOINT /entrypoint.sh
