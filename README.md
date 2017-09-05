@@ -17,7 +17,7 @@ Start the container and expose the RDP server on the desired port (default is 33
 docker run -d -p 3389:3389 kxes/desktop
 ```
 
-Connect your RDP client to this port.
+Connect your RDP client to this port. Default username / password is `user / changeme`.
 
 ## Customising it
 
@@ -40,6 +40,11 @@ For more advanced customisation, you might want to fork this repository and buil
 ## Contributing
 
 Pull requests are always welcome if you have implemented new features or improvements.
+
+Thanks to:
+
+- Minimons
+- *your name here*
 
 ## License
 
