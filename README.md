@@ -35,6 +35,8 @@ RUN useradd --create-home username
 RUN echo "username:password" | chpasswd
 ```
 
+For more advanced customisation, you might want to fork this repository and build an image from scratch. If you make something cool with it, please let us know!
+
 ## Contributing
 
 Pull requests are always welcome if you have implemented new features or improvements.
