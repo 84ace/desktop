@@ -22,3 +22,10 @@ Connect your RDP client to this port.
 ## Customising it
 
 Adding more applications is easy, just create a new Dockerfile based on this image and include some `apt-get` commands.
+
+You can create users / change passwords by including some commands in your Dockerfile:
+
+```
+RUN useradd --create-home username
+RUN echo "username:password" | chpasswd
+```
