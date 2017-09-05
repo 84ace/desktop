@@ -23,6 +23,11 @@ Connect your RDP client to this port.
 
 Adding more applications is easy, just create a new Dockerfile based on this image and include some `apt-get` commands.
 
+```
+FROM kxes/desktop:latest
+RUN apt-get udpate && apt-get install package-name
+```
+
 You can create users / change passwords by including some commands in your Dockerfile:
 
 ```
