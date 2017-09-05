@@ -1,5 +1,7 @@
 # kx desktop
 
+![screenshot](https://user-images.githubusercontent.com/5124298/30076477-d1487778-9270-11e7-8914-052630f5fccc.png)
+
 This container provides a virtual XFCE desktop environment that can be accessed through a remote desktop client, using the [xrdp](http://www.xrdp.org/) open source RDP server.
 
 The current version is based on
