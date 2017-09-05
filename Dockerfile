@@ -19,9 +19,6 @@ RUN apt-get update \
         xfce4-whiskermenu-plugin \
         ttf-ubuntu-font-family \
         xfce4-goodies \
-        thunderbird \
-        firefox \
-        pidgin \
     && add-apt-repository -y ppa:numix/ppa \
     && apt-get update \
     && apt-get install --yes --force-yes --no-install-recommends numix-icon-theme numix-icon-theme-circle \
