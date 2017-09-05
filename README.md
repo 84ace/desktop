@@ -29,3 +29,11 @@ You can create users / change passwords by including some commands in your Docke
 RUN useradd --create-home username
 RUN echo "username:password" | chpasswd
 ```
+
+## Contributing
+
+Pull requests are always welcome if you have implemented new features or improvements.
+
+## License
+
+The source (except the assets under `ubuntu-files/*`) are licensed under the MIT license.
