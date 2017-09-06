@@ -25,7 +25,7 @@ Adding more applications is easy, just create a new Dockerfile based on this ima
 
 ```
 FROM kxes/desktop:latest
-RUN apt-get udpate && apt-get install package-name
+RUN apt-get update && apt-get install package-name
 ```
 
 You can create users / change passwords by including some commands in your Dockerfile:
