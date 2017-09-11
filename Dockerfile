@@ -35,8 +35,8 @@ RUN apt-get update \
         libxfont1-dev \
         pkg-config \
         file \
-        libxfixes-dev
-RUN cd /tmp \
+        libxfixes-dev \
+    && cd /tmp \
     && wget --no-check-certificate $xrdp_source \
     && tar -xf xrdp-*.tar.gz -C /tmp/ \
     && cd /tmp/xrdp-* \
@@ -53,7 +53,19 @@ RUN cd /tmp \
     && make install \
     && cd /tmp \
     && rm -rf xorgxrdp-* \
-    && apt-get autoremove \
+    && apt-get remove --yes --force-yes \
+        wget \
+        build-essential \
+        libssl-dev \
+        libpam0g-dev \
+        libxrandr-dev \
+        nasm \
+        xserver-xorg-dev \
+        libxfont1-dev \
+        pkg-config \
+        file \
+        libxfixes-dev \
+    && apt-get --yes autoremove \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
