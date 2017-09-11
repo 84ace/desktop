@@ -43,6 +43,16 @@ RUN cd /tmp \
     && ./configure \
     && make \
     && make install \
+    && cd /tmp \
+    && rm -rf xrdp-* \
+    && wget --no-check-certificate $xorgxrdp_source \
+    && tar -xf xorgxrdp-*.tar.gz -C /tmp/ \
+    && cd /tmp/xorgxrdp-* \
+    && ./configure \
+    && make \
+    && make install \
+    && cd /tmp \
+    && rm -rf xorgxrdp-* \
     && apt-get autoremove \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
