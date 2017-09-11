@@ -7,7 +7,8 @@ This container provides a virtual XFCE desktop environment that can be accessed 
 The current version is based on
 
 - Ubuntu 17.04 "zesty"
-- xrdp 0.9.1
+- xrdp 0.9.3.1
+- xorgxrdp 0.2.3
 
 ## Running it
 
