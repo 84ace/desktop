@@ -19,6 +19,7 @@ RUN apt-get update \
         xfce4-whiskermenu-plugin \
         ttf-ubuntu-font-family \
         dbus-x11 \
+        vnc4server \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
