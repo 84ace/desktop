@@ -89,5 +89,8 @@ RUN ln -s /usr/share/icons/Numix-Circle /usr/share/icons/KXicons
 RUN useradd --create-home user
 RUN echo "user:changeme" | chpasswd
 
+# add the keyboard maps
+COPY keymaps /etc/xrdp/
+
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT /entrypoint.sh
