@@ -20,6 +20,8 @@ docker run -d -p 3389:3389 kxes/desktop
 
 Connect your RDP client to this port. Default username / password is `user / changeme`.
 
+> If you are using a hardened Linux kernel, such as SELinux enforcing or grsecurity, you might need to use the `--cap-add=IPC_OWNER` option, otherwise, the client will disconnect immediately before the desktop is shown.
+
 ## Customising it
 
 Adding more applications is easy, just create a new Dockerfile based on this image and include some `apt-get` commands.
