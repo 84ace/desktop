@@ -1,4 +1,4 @@
-FROM ubuntu:17.04
+FROM ubuntu:rolling
 
 ARG xrdp_source=https://github.com/neutrinolabs/xrdp/releases/download/v0.9.3.1/xrdp-0.9.3.1.tar.gz
 ARG xorgxrdp_source=https://github.com/neutrinolabs/xorgxrdp/releases/download/v0.2.3/xorgxrdp-0.2.3.tar.gz
@@ -71,7 +71,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # install theme
-RUN echo deb http://ppa.launchpad.net/numix/ppa/ubuntu zesty main > /etc/apt/sources.list.d/numix.list \
+RUN add-apt-repository ppa:numix/ppa \
     && apt-get update \
     && apt-get install --yes --force-yes --no-install-recommends numix-icon-theme numix-icon-theme-circle \
     && apt-get clean \

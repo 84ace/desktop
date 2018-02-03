@@ -4,9 +4,10 @@
 
 This container provides a virtual XFCE desktop environment that can be accessed through a remote desktop client, using the [xrdp](http://www.xrdp.org/) open source RDP server.
 
-The current version is based on
+The `latest` tag is always built from the latest Ubuntu release.
 
-- Ubuntu 17.04 "zesty"
+The current Xrdp version is
+
 - xrdp 0.9.3.1
 - xorgxrdp 0.2.3
 
